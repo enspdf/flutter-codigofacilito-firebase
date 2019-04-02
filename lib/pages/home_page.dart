@@ -1,4 +1,5 @@
 import 'package:app_firebase/classes/auth_firebase.dart';
+import 'package:app_firebase/pages/animal_form_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +20,20 @@ class HomePage extends StatelessWidget {
           ),
         ],
         title: Text("Home"),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => FormAnimal("Nuevo animal", null)));
+        },
+        shape: StadiumBorder(),
+        backgroundColor: Colors.redAccent,
+        child: Icon(
+          Icons.add,
+          size: 20.0,
+        ),
       ),
     );
   }
