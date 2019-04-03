@@ -89,7 +89,7 @@ class FormPageState extends State<FormAnimal> {
     } else {
       if (widget.animal != null) {
         return FadeInImage.assetNetwork(
-          placeholder: null,
+          placeholder: "img/800x700.png",
           image: widget.animal.image,
           height: 800.0,
           width: 700.0,
@@ -123,6 +123,7 @@ class FormPageState extends State<FormAnimal> {
     data["age"] = ageController.text;
 
     if (widget.animal != null && galleyFile == null) {
+      data["image"] = widget.animal.image;
     } else {
       data["image"] = urlImage != null ? urlImage : "";
     }

@@ -1,5 +1,6 @@
 import 'package:app_firebase/classes/auth_firebase.dart';
 import 'package:app_firebase/pages/animal_form_page.dart';
+import 'package:app_firebase/widgets/listview_animal.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -35,6 +36,7 @@ class HomePage extends StatelessWidget {
           size: 20.0,
         ),
       ),
+      body: ListViewAnimal(context),
     );
   }
 
